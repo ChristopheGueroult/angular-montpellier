@@ -1,0 +1,8 @@
+<!-- <p>
+  {{ collection | json }}
+</p> -->
+<div class="container" *ngFor="let cmd of collection">
+  <app-item [item]="cmd"></app-item>
+</div>
+
+
