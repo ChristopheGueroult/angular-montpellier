@@ -1,3 +1,15 @@
 .card {
   margin-top: 1rem;
 }
+
+.state-alivrer {
+  color: rgb(255, 1, 1);
+}
+
+.state-encours {
+  color: rgb(0, 4, 255);
+}
+
+.state-livree {
+  color: rgb(9, 93, 23);
+}
