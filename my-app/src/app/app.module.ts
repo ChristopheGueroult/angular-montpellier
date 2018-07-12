@@ -6,13 +6,11 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
-import { ItemsModule } from './items/items.module';
 import { HomeModule } from './home/home.module';
 import { PageNotFoundModule } from './page-not-found/page-not-found.module';
 import { SharedModule } from './shared/shared.module';
 
 import { AppComponent } from './app.component';
-// TODO  lazy loading et preloading strategy
 
 @NgModule({
   imports: [
@@ -23,7 +21,6 @@ import { AppComponent } from './app.component';
     RouterModule,
     AppRoutingModule,
     HomeModule,
-    ItemsModule,
     PageNotFoundModule,
   ],
   declarations: [
