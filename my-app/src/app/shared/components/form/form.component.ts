@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { State } from '../../enums/state.enum';
 import { Item } from '../../interfaces/item';
 
@@ -10,6 +10,7 @@ import { Item } from '../../interfaces/item';
 export class FormComponent implements OnInit {
   public listStates = Object.values(State);
   public newItem: Item;
+  @Output() newCmd: EventEmitter<Item> = new EventEmitter();
   constructor() { }
 
   ngOnInit() {
@@ -21,12 +22,14 @@ export class FormComponent implements OnInit {
       id: '',
       name: '',
       reference: '',
-      state: State.ALIVRER
+      state: State.ALIVRER,
+      dateLivraison: new Date()
     };
   }
 
   public process(): void {
-    console.log(this.newItem);
+    this.newCmd.emit(this.newItem);
+    this.initItem();
   }
 
 }

@@ -4,11 +4,11 @@ import { CollectionService } from '../../../core/services/collection.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-add',
-  templateUrl: './add.component.html',
-  styleUrls: ['./add.component.css']
+  selector: 'app-add-reactive',
+  templateUrl: './add-reactive.component.html',
+  styleUrls: ['./add-reactive.component.css']
 })
-export class AddComponent implements OnInit {
+export class AddReactiveComponent implements OnInit {
 
   constructor(
     private collectionService: CollectionService,

@@ -1,7 +1,7 @@
 <!-- <p>
   {{ collection | json }}
 </p> -->
-<div class="container" *ngFor="let cmd of collection">
+<div class="container" *ngFor="let cmd of collection | async">
   <app-item [item]="cmd"></app-item>
 </div>
 
