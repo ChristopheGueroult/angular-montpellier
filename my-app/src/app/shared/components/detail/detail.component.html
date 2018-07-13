@@ -1,0 +1,8 @@
+<div class="card text-white bg-primary mb-3" *ngIf="item$ | async, let item">
+  <div class="card-header">{{ item.state }}</div>
+  <div class="card-body">
+    <h5 class="card-title">Name : {{ item.name }}</h5>
+    <p class="card-text">Ref. : {{ item.reference }}</p>
+    <p class="card-text">Date livraison  : {{ item.dateLivraison | date:'fullDate' }}</p>
+  </div>
+</div>

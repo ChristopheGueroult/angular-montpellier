@@ -32,7 +32,7 @@ registerLocaleData(localeFr, 'fr');
     HomeModule,
     PageNotFoundModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule
+    AngularFirestoreModule,
   ],
   declarations: [
     AppComponent

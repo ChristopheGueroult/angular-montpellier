@@ -1,0 +1,17 @@
+<div class="card">
+  <div class="card-header">
+
+    <span [appState]="item.state">{{ item.state }}</span>
+    <button class="icon-trash float-right btn btn-danger btn-sm" (click)="delete()"></button>
+    <button class="icon-edit float-right btn btn-info btn-sm"></button>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Name : {{ item.name }}</h5>
+    <p class="card-text">Ref. : {{ item.reference }}</p>
+    <p class="card-text">Date livraison : {{ item.dateLivraison | date:'fullDate' }}</p>
+
+    <button (click)="changeState(state.ENCOURS)" *ngIf="state.ALIVRER === item.state" class="btn-sm btn-primary">{{ state.ENCOURS }}</button>
+    <button (click)="changeState(state.LIVREE)" *ngIf="state.ENCOURS === item.state" class="btn-sm btn-primary">{{ state.LIVREE }}</button>
+
+  </div>
+</div>
