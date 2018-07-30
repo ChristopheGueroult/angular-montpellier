@@ -35,7 +35,7 @@ export class ItemComponent implements OnInit {
 
   public edit(): void {
     this.itemService.item$.next(this.item);
-    this.router.navigate(['/items/edit']);
+    // this.router.navigate(['/items/edit']);
   }
 
 }
