@@ -1,0 +1,24 @@
+<div class="card" *ngIf="item || (item$ | async); let item">
+    <div class="card-header">
+
+      <!-- <span class="state-alivrer" *ngIf="item.state === state.ALIVRER">{{item.state}}</span>
+      <span class="state-encours" *ngIf="item.state === state.ENCOURS">{{item.state}}</span>
+      <span class="state-livree" *ngIf="item.state === state.LIVREE">{{item.state}}</span> -->
+
+      <span [appState]="item.state">{{ item.state }}</span>
+      <button class="float-right btn btn-danger btn-sm" (click)="delete(item)"><fa-icon icon="trash-alt"></fa-icon></button>
+      <button class="float-right btn btn-info btn-sm" (click)="edit(item)"><fa-icon icon="pen-square"></fa-icon></button>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Name : {{ item.name }}</h5>
+      <p class="card-text">Ref. : {{ item.reference }}</p>
+      <p class="card-text">Date livraison  : {{ item.dateLivraison | date:'fullDate' }}</p>
+
+      <!-- <button (click)="changeState(state.ENCOURS)" *ngIf="state.ALIVRER === item.state" class="btn-sm btn-primary">{{ state.ENCOURS }}</button>
+      <button (click)="changeState(state.LIVREE)" *ngIf="state.ENCOURS === item.state" class="btn-sm btn-primary">{{ state.LIVREE }}</button> -->
+      <ng-container *ngFor="let state of states">
+        <button class="btn" [ngClass]="{'btn-info': item.state === state, 'btn-secondary': item.state !== state}" (click)="changeState(state, item)">{{ state }}</button>
+      </ng-container>
+    </div>
+  </div>
+

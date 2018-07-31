@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { IconsModule } from '../icons/icons.module';
 import { ItemsRoutingModule } from './items-routing.module';
 import { SharedModule } from '../shared/shared.module';
 
-import { ItemComponent } from './components/item/item.component';
 import { ListComponent } from './containers/list/list.component';
 import { AddComponent } from './containers/add/add.component';
 import { AddReactiveComponent } from './containers/add-reactive/add-reactive.component';
@@ -19,9 +19,10 @@ import { Item3Component } from './components/item3/item3.component';
   imports: [
     CommonModule,
     SharedModule,
-    ItemsRoutingModule
+    ItemsRoutingModule,
+    IconsModule
   ],
   // tslint:disable-next-line:max-line-length
-  declarations: [ListComponent, ItemComponent, AddComponent, AddReactiveComponent, Item2Component, List2Component, AddReactive2Component, EditComponent, Item1Component, Item3Component]
+  declarations: [ListComponent, AddComponent, AddReactiveComponent, Item2Component, List2Component, AddReactive2Component, EditComponent, Item1Component, Item3Component]
 })
 export class ItemsModule { }

@@ -1,5 +1,5 @@
 <ul class="list-group tab">
-  <li class="list-group-item" *ngFor="let item of collection | async" [appDetail]="item">
+  <li class="list-group-item" *ngFor="let item of collection$ | async" [appDetail]="item">
     <span>{{ item.state }}</span>
     <span class="float-right">{{ item.name }}</span>
   </li>

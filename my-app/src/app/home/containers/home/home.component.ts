@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CollectionService } from '../../../core/services/collection.service';
 
 @Component({
   selector: 'app-home',
@@ -6,11 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-  constructor() { }
+  constructor(
+  ) { }
 
   ngOnInit() {
-    console.log(new Date(2018, 7, 12)); 
+    console.log(new Date(2018, 7, 12));
   }
 
 }

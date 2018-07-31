@@ -55,4 +55,5 @@ export class CollectionService {
     this.itemsCollection.doc(item.id).delete()
       .catch(error => console.log(error));
   }
+
 }

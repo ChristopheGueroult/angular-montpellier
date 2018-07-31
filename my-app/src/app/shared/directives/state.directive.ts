@@ -7,7 +7,8 @@ import { State } from '../enums/state.enum';
 export class StateDirective implements OnChanges {
   @Input() appState: State;
   @HostBinding('class') nomClass: string;
-  constructor() {
+  constructor(
+  ) {
   }
 
   ngOnChanges() {

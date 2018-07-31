@@ -5,7 +5,9 @@
 <app-item1></app-item1>
 <app-item3></app-item3>
 <div class="container" *ngFor="let cmd of collection | async">
-  <app-item [item]="cmd"></app-item>
+  <app-item [item]="cmd">
+    
+  </app-item>
 </div>
 
 

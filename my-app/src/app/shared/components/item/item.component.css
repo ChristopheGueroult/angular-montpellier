@@ -1,0 +1,8 @@
+.card-body button {
+  margin-right: .5rem;
+  cursor: pointer;
+}
+.card-header button {
+  margin-left: .5rem;
+  cursor: pointer;
+}

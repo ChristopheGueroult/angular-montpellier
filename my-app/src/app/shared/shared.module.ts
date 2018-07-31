@@ -10,6 +10,8 @@ import { StateDirective } from './directives/state.directive';
 import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
 import { DetailComponent } from './components/detail/detail.component';
 import { DetailDirective } from './directives/detail.directive';
+import { ItemComponent } from './components/item/item.component';
+import { IconsModule } from '../icons/icons.module';
 
 @NgModule({
   imports: [
@@ -17,9 +19,10 @@ import { DetailDirective } from './directives/detail.directive';
     NgbModule,
     RouterModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    IconsModule
   ],
-  declarations: [NavComponent, StateDirective, FormComponent, ReactiveFormComponent, DetailComponent, DetailDirective],
-  exports: [NavComponent, StateDirective, FormComponent, ReactiveFormComponent, DetailComponent, DetailDirective]
+  declarations: [NavComponent, StateDirective, FormComponent, ReactiveFormComponent, DetailComponent, DetailDirective, ItemComponent],
+  exports: [NavComponent, StateDirective, FormComponent, ReactiveFormComponent, DetailComponent, DetailDirective, ItemComponent]
 })
 export class SharedModule { }
